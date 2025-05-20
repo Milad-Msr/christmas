@@ -249,6 +249,66 @@ img {
 
 /*=============== HOME ===============*/
 
+.home {
+  height: 650px;
+  overflow: hidden;  
+  padding-top: 7rem;
+  position: relative;
+  background: linear-gradient(180deg, #063360, #4994df);
+}
+
+.home-title{
+  color: var(--white-color);
+  font-size: var(--biggest-font-size);
+  font-family: var(--second-font);
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.home img {
+  position: absolute;
+}
+
+.home-mountain-1,
+.home-snow {
+  bottom: 0;
+}
+
+.home-village,
+.home-pine,
+.home-moon,
+.home-trineo {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.home-village {
+  width: 260px;
+  bottom: 1rem;
+}
+
+.home-pine {
+  width: 250px;
+  bottom: 4rem;
+}
+
+.home-mountain-2 {
+  bottom: 3rem;
+}
+.home-mountain-3 {
+  bottom: 6rem;
+}
+
+.home-moon {
+  width: 300px;
+  bottom: 8.5rem;
+}
+
+.home-trineo {
+  width: 250px;
+  bottom: 14.5rem;
+}
 
 /*=============== ABOUT ===============*/
 

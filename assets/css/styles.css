@@ -4,8 +4,8 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
-  --animate-snow-1: animate-snow-1 5s infinite ease-in-out;
-  --animate-snow-2: animate-snow-2 5s infinite ease-in-out;
+  --animate-snow-1: animate-snow-1 6s infinite ease-in-out;
+  --animate-snow-2: animate-snow-2 6s infinite ease-in-out;
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -115,18 +115,18 @@ img {
 /* Snow animation */
 @keyframes animate-snow-1 {
   0%, 100% {
-    transform: scale(.5);
+    transform: rotate(180deg);
   }
   50% {
-    transform: scale(1);
+    transform: rotate(90deg);
   }
 }
 @keyframes animate-snow-2 {
   0%, 100% {
-    transform: scale(1);
+    transform: rotate(90deg);
   }
   50% {
-    transform: scale(.5);
+    transform: rotate(180deg);
   }
 }
 
@@ -242,6 +242,10 @@ img {
 
 
 /* Change background header */
+.bg-header {
+  background: var(--body-color);
+}
+
 
 
 /* Active link */
@@ -312,27 +316,265 @@ img {
 
 /*=============== ABOUT ===============*/
 
+.about-container {
+  position: relative;
+  row-gap: 3.5rem;
+}
+
+.section-title {
+  font-family: var(--second-font);
+  margin-bottom: 30px;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.about-data {
+  text-align: center;
+}
+
+.about-description {
+  margin-bottom: 2rem;
+}
+
+.about-img {
+  width: 320px;
+  justify-self: center;
+}
+
+.about-snow-1,
+.about-snow-2 {
+  width: 50px;
+  position: absolute;
+}
+
+.about-snow-1 {
+  top: 12rem;
+  left: 1.5rem;
+  animation: var(--animate-snow-1);
+}
+
+.about-snow-2 {
+  right: -.75rem;
+  bottom: .5rem;
+  animation: var(--animate-snow-2);
+}
 
 /*=============== BUTTON ===============*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  transition: background .4s, box-shadow .4s;
+}
 
+.button:hover {
+  background-color: var(--first-color-alt);
+  box-shadow: 0 8px 32px #2c8ae8b3;
+}
 
 /*=============== SEND ===============*/
+.send-container {
+  position: relative;
+  grid-template-columns: 200px;
+  justify-content: center;
+  row-gap: 3rem;
+  padding-top: 1.5rem;
+}
+
+
+.send-card {
+  text-align: center;
+}
+
+.send-img {
+  width: 180px;
+  margin-bottom: .75rem;
+}
+
+.send-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+
+.send-descriptino {
+  font-size: var(--small-font-size);
+  padding-inline: 1.5rem;
+}
+
+.send-snow-1,
+.send-snow-2,
+.send-snow-3 {
+  width: 50px;
+  position: absolute;
+}
+
+.send-snow-1 {
+  left: 0;
+  top: 7rem;
+  animation: var(--animate-snow-1);
+}
+
+.send-snow-2 {
+  top: 23rem;
+  right: 0;
+  animation: var(--animate-snow-2);
+}
+
+.send-snow-3 {
+  bottom: 9rem;
+  left: 0;
+  animation: var(--animate-snow-1);
+}
+
+
 
 
 /*=============== CELEBRATE ===============*/
+.celebrate-container {
+  position: relative;
+  row-gap: 3.5rem;
+}
+
+.celebrate-data {
+  text-align: center;
+}
+
+
+.celebrate-description {
+  margin-bottom: 2rem;
+}
+
+.celebrate-img {
+  width: 320px;
+  justify-self: center;
+}
+
+.celebrate-snow-1,
+.celebrate-snow-2 {
+  width: 30px;
+  position: absolute;
+}
+
+.celebrate-snow-1{
+  top: 0;
+  left: 1.5rem;
+  animation: var(--animate-snow-1);
+}
+
+.celebrate-snow-2 {
+  top: 18rem;
+  right: 0;
+  animation: var(--animate-snow-2);
+}
+
 
 
 /*=============== FOOTER ===============*/
+.footer {
+  overflow: hidden;
+}
 
+.footer-container {
+  position: relative;
+  padding-block: 4.5rem 2.5rem;
+  text-align: center;
+}
+
+.footer-logo,
+.footer-social-link,
+.footer-copy {
+  color: var(--white-color);
+}
+
+.footer-logo {
+  display: inline-block;
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+
+.footer-social-link {
+  font-size: 1.25rem;
+  transition: color .3s;
+}
+
+.footer-social-link:hover {
+  color: var(--first-color);
+}
+
+.footer-copy {
+  display: block;
+  margin-top: 2rem;
+  font-size: var(--smaller-font-size);
+}
+
+.footer-snow-1,
+.footer-snow-2 {
+  position: absolute;
+}
+
+.footer-snow-1 {
+  width: 50px;
+  top: 3rem;
+  left: 4rem;
+  animation: var(--animate-snow-1);
+}
+
+.footer-snow-2 {
+  width: 30px;
+  top: 6.5rem;
+  right: 2rem;
+  animation: var(--animate-snow-2);
+}
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(210, 8%, 15%);
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: hsl(210, 8%, 25%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(210, 8%, 35%);
+}
 
 /*=============== SCROLL UP ===============*/
+.scroll-up {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--white-color);
+  display: inline-flex;
+  padding: .45rem;
+  border-radius: .45rem;
+  font-size: 1rem;
+  color: var(--body-color);
+  z-index: var(--z-tooltip);
+  transition: bottom .3s, transform .3s;
+}
 
+.scroll-up:hover {
+  transform: translateY(-.25rem);
+}
 
 /* Show Scroll Up */
-
+.show-scroll {
+  bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
